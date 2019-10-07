@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+    //COMMUN
+
     detectIE();
 
     if (navigator.userAgent.indexOf('Mac') > 0) {
@@ -11,6 +13,22 @@ $(document).ready(function () {
     //langSelectionBox.on(clickEventFilter, function () {
      //   langSelector.toggleClass('active');
     //});
+    
+
+    var swiper = new Swiper('.swiper-container', {
+        autoHeight: true,
+        spaceBetween: 20,
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'fraction',
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+    });
+
+    //cancer mama products
 
 });
 
@@ -18,8 +36,6 @@ $(document).ready(function () {
 //Detectar IE e incluir clase
 
 function detectIE() {
-
-    console.log('hola');
     
     var ua = window.navigator.userAgent;
     var msie = ua.indexOf('MSIE ');
